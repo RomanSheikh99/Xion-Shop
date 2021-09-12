@@ -1,15 +1,16 @@
 const loadProducts = () => {
-  const url = `https://fakestoreapi.com/products`;
+  const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
   fetch(url)
-    .then((response) => response.json())
-    .then((data) => showProducts(data));
+    .then(res => res.json())
+    .then(data => showProducts(data.meals));
 };
 loadProducts();
 
 // show all product in UI 
 const showProducts = (products) => {
-  const allProducts = products.map((pd) => pd);
-  for (const product of allProducts) {
+  // const allProducts = products.map((pd) => pd);
+  for (const product of products) {
+    console.log(product);
     const image = product.images;
     const div = document.createElement("div");
     div.classList.add("product");
