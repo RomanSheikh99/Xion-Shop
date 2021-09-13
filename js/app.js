@@ -9,6 +9,18 @@ const loadProducts = () => {
 const showProducts = (products) => {
   const allProducts = document.getElementById("all-products");
   products.forEach(product => {
+    // const cat = product.category;
+    // const img = product.image;
+    // const name = product.title;
+    // const rate = product.rating.rate;
+    // const rivew = product.rating.count;
+    // const price = product.price;
+    // console.log(cat)
+    // console.log(img)
+    // console.log(name)
+    // console.log(rate)
+    // console.log(rivew)
+    // console.log(price)
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
@@ -22,8 +34,8 @@ const showProducts = (products) => {
           <p class="line body-text">Rating : <span class='highlight'> ${product.rating.rate} </span></p>
           <p class="line body-text">Reviews : <span class='highlight'> ${product.rating.count} </span></p>
           <h2 class="product-price">Price: $ ${product.price}</h2>
-           <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn">Add To Cart <i class="fas fa-cart-plus"></i></button>
-           <button id="details-btn" class="btn">Details</button>
+           <button onClick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn">Add To Cart <i class="fas fa-cart-plus"></i></button>
+           <button id="details-btn" onClick="displayDetails(${product});" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Details</button>
          </div>
       </div>
       `;
@@ -86,11 +98,20 @@ const updateTotal = () => {
   document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
 
-const displayDetails = (category, img, title, rate, review, price) => {
-  const productCategory = document.getElementById('product-category');
-  productCategory.innerText = category;
-  const productImg = document.getElementById('product-img');
-  productImg.setAttribute('src', img);
+const displayDetails = product => {
+  console.log(product);
+  // const productCategory = document.getElementById('product-category');
+  // productCategory.innerText = category;
+  // const productImg = document.getElementById('product-img');
+  // productImg.setAttribute('src', img);
+  // const productTitle = document.getElementById('product-name');
+  // productTitle.innerText = title;
+  // const productRate = document.getElementById('product-rate');
+  // productRate.innerText = rate;
+  // const productReview = document.getElementById('product-review');
+  // productReview.innerText = review;
+  // const productPrice = document.getElementById('product-price');
+  // productPrice.innerText = price;
 }
 
 
