@@ -22,7 +22,7 @@ const showProducts = (products) => {
           <p class="line body-text">Rating : <span class='highlight'> ${product.rating.rate} </span></p>
           <p class="line body-text">Reviews : <span class='highlight'> ${product.rating.count} </span></p>
           <h2 class="product-price">Price: $ ${product.price}</h2>
-           <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn">Add To Cart</button>
+           <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn">Add To Cart <i class="fas fa-cart-plus"></i></button>
            <button id="details-btn" class="btn">Details</button>
          </div>
       </div>
@@ -85,6 +85,14 @@ const updateTotal = () => {
     getInputValue("total-tax");
   document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
+
+const displayDetails = (category, img, title, rate, review, price) => {
+  const productCategory = document.getElementById('product-category');
+  productCategory.innerText = category;
+  const productImg = document.getElementById('product-img');
+  productImg.setAttribute('src', img);
+}
+
 
 // call load Products function
 loadProducts();
