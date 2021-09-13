@@ -27,13 +27,21 @@ body {
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
-  border: 1px solid #0040ffbd;
 }
 .product-image {
   padding: 5px;
   border-radius: 6px;
   width: 150px;
   height: 150px;
+}
+.product-title{
+  font-size: 1.1rem;
+}
+.body-text{
+  font-size: .9rem;
+}
+.product-price{
+  font-size: 1.6rem;
 }
 .line{
   margin-bottom: .3rem;
