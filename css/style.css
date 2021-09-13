@@ -1,15 +1,24 @@
+/* some common style sheet */
+*{
+  padding: 0;
+  margin: 0;
+}
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
 
+/* header section styleSheet */
 .header{
   background: #7B00FF;
 }
 
+/* main section style sheet */
 .main{
    padding: 0px 10px;
 }
+
+/* product section style sheet */
 .single-product {
   background: #F6F5F8;
   border: none;
@@ -26,13 +35,6 @@ body {
   width: 150px;
   height: 150px;
 }
-
-
-.shopping-cart-title{
-  padding-bottom: 20px;
-  border-bottom: 1.5px solid #000;
-}
-
 .line{
   margin-bottom: .3rem;
 }
@@ -51,8 +53,10 @@ body {
   color: #FD5800;
 }
 
-.title-text {
-    color: #7b00ff;
+/* cart section style sheet */
+.shopping-cart-title{
+  padding-bottom: 20px;
+  border-bottom: 1.5px solid #000;
 }
 
 .shopping-cart{
@@ -64,6 +68,8 @@ body {
   order: 1;
 }
 
+
+/* Add responsive design */
 @media (max-width: 576px){
   .shopping-cart{
     position: inherit;
