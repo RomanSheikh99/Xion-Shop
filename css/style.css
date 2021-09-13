@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+  padding: 10px;
 }
 
 .single-product {
@@ -38,4 +39,20 @@ body {
 #details-btn{
   background: #7B00FF;
   color: #fff;
+}
+
+.highlight{
+  color: #FD5800;
+}
+
+.shopping-cart{
+  position: fixed;
+  right: 0;
+}
+
+
+@media (max-width: 576px){
+  .shopping-cart{
+    position: inherit;
+  }
 }

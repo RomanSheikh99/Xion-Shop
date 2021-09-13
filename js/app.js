@@ -18,9 +18,9 @@ const showProducts = (products) => {
         </div>
         <div class="card-body">
           <h3>${product.title}</h3>
-          <p class="line">Category : ${product.category}</p>
-          <p class="line">Rating : ${product.rating.rate}</p>
-          <p class="line">People Rate This : ${product.rating.count}</p>
+          <p class="line">Category : <span class='highlight'> ${product.category} </span></p>
+          <p class="line">Rating : <span class='highlight'> ${product.rating.rate} </span></p>
+          <p class="line">People Rate This : <span class='highlight'> ${product.rating.count} </span></p>
           <h2>Price: $ ${product.price}</h2>
            <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn">Add To Cart</button>
            <button id="details-btn" class="btn">Details</button>
