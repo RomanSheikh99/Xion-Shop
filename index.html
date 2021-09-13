@@ -29,13 +29,10 @@
   <main class="main">
 
     <!-- search feild section start -->
-    <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
+    <div class="container">
+      <div class="input-group my-5 w-50 mx-auto">
+        <input type="text" class="form-control" placeholder="Search Any Products">
+        <span class="input-group-text bg-primary text-white cursor-pointer">Search</span>
       </div>
     </div>
     <!-- search feild section end -->
@@ -44,7 +41,7 @@
 
       <!-- products section start -->
       <div class="col-md-9 col-lg-9 col-sm-7">
-        <div id="all-products" class="">
+        <div id="all-products" class="row row-cols-1 row-cols-md-3 g-4">
         </div>
       </div>
       <!-- products section end -->
@@ -54,35 +51,24 @@
         <div class="cart" id="my-cart">
           <table class="table">
             <thead>
-              <h1>My-Cart</h1>
-              <tr>
-                
-              </tr>
+              <h1 class="shopping-cart-title">My-Cart</h1>
             </thead>
             <tbody>
               <tr>
                 <th>Total Added-Products:</th>
                 <td><span id="total-Products">0</span></td>
-                <td></td>
-                <td></td>
               </tr>
               <tr>
                 <th>Price:</th>
                 <td>$ <span id="price">0</span></td>
-                <td></td>
-                <td></td>
               </tr>
               <tr>
                 <th>Delivery-Charge:</th>
                 <td>$ <span id="delivery-charge">20</span></td>
-                <td></td>
-                <td></td>
               </tr>
               <tr>
                 <th>Total-Tax:</th>
                 <td>$ <span id="total-tax">0</span></td>
-                <td></td>
-                <td></td>
               </tr>
               <tr>
                 <th scope="row">Total</th>
