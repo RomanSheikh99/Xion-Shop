@@ -18,13 +18,13 @@ const showProducts = (products) => {
         </div>
         <div class="card-body">
           <h3>${product.title}</h3>
-          <p>Category : ${product.category}</p>
-          <p>Rating : ${product.rating.rate}</p>
-          <p>People Rate This : ${product.rating.count}</p>
+          <p class="line">Category : ${product.category}</p>
+          <p class="line">Rating : ${product.rating.rate}</p>
+          <p class="line">People Rate This : ${product.rating.count}</p>
           <h2>Price: $ ${product.price}</h2>
-          <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-          <button id="details-btn" class="btn btn-danger">Details</button>
-          </div>
+           <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn">Add To Cart</button>
+           <button id="details-btn" class="btn">Details</button>
+         </div>
       </div>
       `;
       allProducts.appendChild(div);
