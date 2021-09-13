@@ -1,9 +1,15 @@
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
-  padding: 10px;
 }
 
+.header{
+  background: #7B00FF;
+}
+
+.main{
+   padding: 0px 10px;
+}
 .single-product {
   background: #F6F5F8;
   border: none;
@@ -45,14 +51,27 @@ body {
   color: #FD5800;
 }
 
+.title-text {
+    color: #7b00ff;
+}
+
 .shopping-cart{
   position: fixed;
   right: 0;
+  order: 2;
 }
-
+.products-container{
+  order: 1;
+}
 
 @media (max-width: 576px){
   .shopping-cart{
     position: inherit;
+    order: 1;
+    margin-bottom: 20px;
   }
+  .products-container{
+    order: 2;
+  }
+
 }

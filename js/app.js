@@ -31,9 +31,9 @@ const showProducts = (products) => {
   })
 };
 
+let count = 0;
 // add product to cart function
 const addToCart = (id, price) => {
-  let count = 0;
   count = count + 1;
   updatePrice("price", price);
   updateTaxAndCharge();
